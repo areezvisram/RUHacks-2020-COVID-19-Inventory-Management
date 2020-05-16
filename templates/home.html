@@ -1,21 +1,36 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <link rel= "stylesheet" type= "text/css" href= "static/styles/home.css">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/home.css') }}">
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
 
 
 </head>
+
 <body>
 
+
+
+
     <div class="container">
-        <img src="static/pictures/covid background 5.jpg" class="bg-img responsive"></img>
-        <img src="static/pictures/warning 1.png"></img>
+        <div class="bg-img responsive">
+            <div class="nav_container">
+                <nav>
+                    <div class="topnav the-blur">
+                        <a href="{{ url_for('inventory')}}">INVENTORY</a>
+                        <a href="{{ url_for('about') }}">ABOUT</a>
+                    </div>
+                </nav>
+            </div>
+        </div>
         <div class="maintitle">COVID-19</div>
-        
+        <div class="medical_supps">MEDICAL SUPPLY INVENTORY MANAGEMENT</div>
+        <div class="ruhacks">CREATED FOR RUHACKS 2020</div>
+        <div class="names">BY: AREEZ VISRAM & NEIL LOBO</div>
     </div>
 
 
