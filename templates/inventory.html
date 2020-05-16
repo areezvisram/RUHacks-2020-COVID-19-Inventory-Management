@@ -1,33 +1,63 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-	<title>Inventory</title>
-	<style type="text/css">
-		table, th, td
-		{
-			border: 1px solid black 
-		}
-	</style>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/table.css') }}">
+	<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+
+
 </head>
+
 <body>
-	<table>
-		<tr>
-			<th>Supply</th>
-			<th>Picutre</th>
-			<th>Stock</th>
-			<th>Needed</th>
-			<th>Map</th>
-		</tr>
-		{% for item in inventory %}
-		<script type="text/javascript"> console.log("test")</script>
-		<tr>
-			<td>{{ item["name"] }}</td>
-			<td>pic</td>
-			<td>{{ item["stock"] }}</td>
-			<td>{{ item["needed"] }}</td>
-			<td><a href="/map/{{ item["path"] }}">Map</a></td>
-		</tr>
-		{% endfor %}
-	</table>
+	<div class="bg-img responsive">
+		<div class="maintitle">MEDICAL SUPPLY INVENTORY</div>
+		<nav>
+			<div class="topnav">
+				<a href="{{ url_for('home')}}">HOME</a>
+			</div>
+		</nav>
+		<div class="container">
+
+			<div class="container-table100">
+				<div class="wrap-table100">
+					<div class="table100 ver1 m-b-110">
+						<div class="table100-head">
+							<table>
+								<thead>
+									<tr class="row100 head">
+										<th>Supply</th>
+										<th>Picture</th>
+										<th>Stock</th>
+										<th>Needed</th>
+										<th>Map</th>
+									</tr>
+								</thead>
+							</table>
+						</div>
+
+						<div class="table100-body scroll">
+							<table>
+								<tbody>
+									{% for item in inventory %}
+									<tr class="row100 head">
+										<td>{{ item["name"] }}</td>
+										<td>pic</td>
+										<td>{{ item["stock"] }}</td>
+										<td>{{ item["needed"] }}</td>
+										<td><a href="/map/{{ item["path"] }}">Map</a></td>
+									</tr>
+									{% endfor %}
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 </body>
+
 </html>
