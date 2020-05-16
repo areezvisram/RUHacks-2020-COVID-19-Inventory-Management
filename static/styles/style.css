@@ -14,10 +14,27 @@ body {
 	background-size: cover;
 	background-attachment: fixed;
 	position: relative;
-
-
-	
   
+  }
+
+
+  .topnav {
+	float: right;
+	margin-top: 17px;
+	background-color: black;
+	overflow: hidden;
+	
+  }
+  
+  
+  .topnav a {
+	
+	font-family: 'Bebas Neue', cursive;
+	font-size: 60px;
+	color: white;
+	text-align: center;
+	padding: 35px 16px;
+	text-decoration:none;
   }
   
     
