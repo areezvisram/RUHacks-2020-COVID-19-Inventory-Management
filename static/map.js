@@ -60,6 +60,13 @@ document.getElementById("change_markers").addEventListener("click", () => {
 	}
 })
 
+document.getElementById("toggle_stock_markers").addEventListener("click", () => {
+	for (let marker of markers)
+	{
+		marker["marker"].setMap( Boolean(marker["marker"].getMap()) ? null : map)
+	}
+})
+
 }
 
 console.log("loaded init function")

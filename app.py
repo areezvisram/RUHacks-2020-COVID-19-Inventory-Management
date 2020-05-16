@@ -42,6 +42,33 @@ def map(supply):
 	stock = []
 	needed = []
 
+	if (supply == "all"):
+		all_locations = list(locations.find({}))
+
+		for location in all_locations:
+			if "stock" in location:
+				stock.append({
+						"location":location["location"],
+						"stock":location["stock"]
+						})
+			if "needed" in location:
+				needed.append({
+						"location":location["location"],
+						"needed":location["needed"]
+						})
+
+			data = {
+			"stock": stock,
+			"needed": needed
+		}
+		
+		data = json.dumps(data)
+		map_style = json.load(open("static/map_style.json"))
+
+
+		return render_template("map.html", type="all", data=data, style=map_style, url=os.environ.get("MAP_API_URL")+"&callback=initMap&libraries=visualization")
+
+
 	item_supply = supp.find_one({"path":supply})
 	if item_supply:
 
@@ -60,9 +87,6 @@ def map(supply):
 						"location":location["location"],
 						"needed":location["needed"]
 						})
-
-
-
 
 		data = {
 			"stock": stock,
