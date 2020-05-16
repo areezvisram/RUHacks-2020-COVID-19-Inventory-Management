@@ -1,5 +1,6 @@
 let markers = []
 let heat_points = []
+let heat_markers = []
 let map
 let heat_map
 
@@ -56,7 +57,7 @@ function set_pins(map)
 	{
 		let loc = {lat:point.location.lat, lng:point.location.long}
 
-		let info_str = ""
+		let info_str = "<p>" + point.location.address + "</p>"
 
 		for (let item of point.stock)
 		{
@@ -85,11 +86,40 @@ function set_pins(map)
 
 function set_heat_points(map)
 {
+
+
 	for (let point of needed)
 	{
 		let loc = {lat:point.location.lat, lng:point.location.long}
 
 		heat_points.push(new google.maps.LatLng(loc.lat,loc.lng))
+
+		//start of heat point markers
+		let info_str = "<p>" + point.location.address + "</p>"
+
+		for (let item of point.needed)
+		{
+			info_str += "<p>" + item.name + " : " + String(item.amount) + "</p>"
+		}
+
+		heat_markers.push({
+			marker: new google.maps.Marker({
+				position: new google.maps.LatLng(loc.lat,loc.lng),
+				map: map,
+				title: point.location.address,
+				icon: "../static/pictures/blue_Marker.png"
+			}),
+			info: new google.maps.InfoWindow({
+				content: info_str
+			})
+		})
+
+		for (let point of heat_markers)
+		{
+			point.marker.addListener("click", () => point.info.open(map, point.marker))
+		}
+		
+		//end of heat point markers
 	}
 
 	heat_map = new google.maps.visualization.HeatmapLayer({data:heat_points})
