@@ -18,6 +18,16 @@
 			<th>Needed</th>
 			<th>Map</th>
 		</tr>
+		{% for item in inventory %}
+		<script type="text/javascript"> console.log("test")</script>
+		<tr>
+			<td>{{ item["name"] }}</td>
+			<td>pic</td>
+			<td>{{ item["stock"] }}</td>
+			<td>{{ item["needed"] }}</td>
+			<td><a href="#">Map</a></td>
+		</tr>
+		{% endfor %}
 	</table>
 </body>
 </html>

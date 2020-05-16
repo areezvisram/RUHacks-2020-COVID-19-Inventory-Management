@@ -7,8 +7,9 @@ app = Flask(__name__)
 load_dotenv()
 
 cluster = MongoClient(os.environ.get("MONGO_CONNECTION_STRING"))
-db = cluster["ru_hacks"]["inventory"]
-print(db.find_one({"name":"face mask"}))
+locations = cluster["ru_hacks"]["locations"]
+supp = cluster["ru_hacks"]["supplies"]
+# print(inv.find_one({"name":"face mask"}))
 
 @app.route("/")
 def home():
@@ -22,7 +23,9 @@ def redirect_home():
 
 @app.route("/inventory")
 def inventory():
-	return render_template("inventory.html")
+	supplies = list(supp.find({}))
+	# print(supplies)
+	return render_template("inventory.html", inventory=supplies)
 
 @app.route("/about")
 def about():
