@@ -1,21 +1,22 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    
-        <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/style.css') }}">
-        <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
-        
-    
-    </head>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+
+
+</head>
 
 
 <body>
     <h1>Covid-19 Questionnaire</h1>
 
 
-    <form id="quiz" name="quiz">
+    <form id="quiz1" name="quiz1">
 
 
         <p class="questions">Are you experiencing any of the following?</p>
@@ -24,19 +25,62 @@
         <input type="checkbox" id="mc" name="question1" value="waking_up">Having a very hard time waking up<br>
         <input type="checkbox" id="mc" name="question1" value="confused">Feeling confused<br>
         <input type="checkbox" id="mc" name="question1" value="consciousness">Lost consciousness<br>
-        
 
 
 
-        <input id="button" type="button" value="I'm finished!">
+
+        <input id="button1" type="button" value="NEXT">
 
 
     </form>
-    <script src="../static/main.js"></script>
+
+    <form id="quiz2" name="quiz2">
+
+
+        <p class="questions">Are you experiencing any of the following:</p>
+        <input type="checkbox" id="mc" name="question2" value="breath">Shortness of breath at rest<br>
+        <input type="checkbox" id="mc" name="question2" value="lie_down">Inability to lie down because of difficulty
+        breathing<br>
+        <input type="checkbox" id="mc" name="question2" value="chronic">Chronic health conditions that you are having
+        difficulty managing<br>
+
+
+
+        <input id="button2" type="button" value="NEXT">
+
+
+
+    </form>
+
+    <form id="quiz3" name="quiz3">
+
+
+        <p class="questions">Do you have any of the following:</p>
+        <input type="checkbox" id="mc" name="question3" value="chills">Chills<br>
+        <input type="checkbox" id="mc" name="question3" value="painful_swallowing">Painful swallowing<br>
+        <input type="checkbox" id="mc" name="question3" value="stuffy_nose">Stuffy nose<br>
+        <input type="checkbox" id="mc" name="question3" value="headache">Headache<br>
+        <input type="checkbox" id="mc" name="question3" value="muscle_ache">Muscle or joint ache<br>
+        <input type="checkbox" id="mc" name="question3" value="unwell">Feeling unwell, fatigue or severe exhaustion<br>
+        <input type="checkbox" id="mc" name="question3" value="nausea">Nausea, vomiting, diarrhea or unexplained loss of
+        appetite<br>
+        <input type="checkbox" id="mc" name="question3" value="smell">Loss of sense of smell or taste<br>
+        <input type="checkbox" id="mc" name="question3" value="pink_eye">Pink Eye<br>
+
+        <input id="button3" type="button" value="FINISH">
+
+
+
+
+
+    </form>
 
     <div id="after_submit">
-         <p id="message">Hello</p>
+        
     </div>
+    <script src="../static/main.js"></script>
+
+
 
 </html>
 
