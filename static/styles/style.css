@@ -1,37 +1,81 @@
   
 body {
 	font-family: 'Bebas Neue', cursive;
+	height: 100%;
+}
+
+.bg-img {
+  
+	background-image: url("../pictures/background.jpg");
+	min-height: 1000px;
+  
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+	position: relative;
+
+
+	
+  
+  }
+  
+    
+  .responsive {
+	width: 100%;
+	height: auto;
+  }
+
+  .maintitle {
+    font-size: 100px;
+    font-family: 'Bebas Neue', cursive;
+    margin: 0;
+    position: absolute;
+    text-align: center;
+    top: 20%;
+    transform: translateY(-50%);
+    width: 100%;
+    color: red;
 }
 
 
 
 #quiz1 {
-	margin-left: 10px;
 	background: #d2def2;
 	padding: 10px 20px 10px 20px;
-	width: 400px;
+	width: 700px;
 	border-radius: 20px;
 	float: left;
+	font-size: 30px;
+	position: relative;
+	left: 550px;
+	top: 300px;
 
 }
 
 #quiz2 {
-	margin-left: -10px;
 	background: #d2def2;
 	padding: 10px 20px 10px 20px;
-	width: 400px;
+	width: 700px;
 	border-radius: 20px;
 	float: left;
+	font-size: 30px;
+	position: relative;
+	left: 550px;
+	top: 300px;
 
 }
 
 #quiz3 {
-	margin-left: -10px;
 	background: #d2def2;
 	padding: 10px 20px 10px 20px;
-	width: 400px;
+	width: 700px;
 	border-radius: 20px;
 	float: left;
+	font-size: 30px;
+	position: relative;
+	left: 550px;
+	top: 300px;
 
 }
 
@@ -46,10 +90,11 @@ input {
 	border-radius: 5px;
 	border: none;
 	padding-left: 5px;
+	
 }
 
 
-#button {
+#button1 {
 	background: green;
 	border: none;
 	border-radius: 5px;
@@ -62,35 +107,48 @@ input {
 
 
 
-#button:hover {
-	background: white;
-	border: 1px solid green;
-	color: black;
-	cursor: pointer;
+#button2 {
+	background: green;
+	border: none;
+	border-radius: 5px;
+	padding: 10px;
+	color: white;
+	font-size: 16px;
+	transition-duration: .5s;
+	margin-top: 15px;
+}
 
+#button3 {
+	background: green;
+	border: none;
+	border-radius: 5px;
+	padding: 10px;
+	color: white;
+	font-size: 16px;
+	transition-duration: .5s;
+	margin-top: 15px;
 }
 
 #after_submit {
 	visibility: hidden;
 	background: #ff5459;
 	padding: 10px 20px 10px 20px;
-	width: 400px;
+	width: 700px;
 	border-radius: 20px;
 	float: left;
-	margin-left: 20px;
-	margin-top: 50px;
-	font-size: 30px;
+	margin-left: 550px;
+	margin-top: 350px;
+	font-size: 60px;
 
 
 }
 
-#picture {
-	width: 375px;
-	height: 245px;
-}
 
 
 
-#mc {
+.mc {
+	transform: scale(1.3);
+
 	display: inline;
+
 } 

@@ -13,73 +13,85 @@
 
 
 <body>
-    <h1>Covid-19 Questionnaire</h1>
+
+    <div class="container">
+        <div class="bg-img responsive">
+            <div class="maintitle">Covid-19 Questionnaire</div>
 
 
-    <form id="quiz1" name="quiz1">
+            <form id="quiz1" name="quiz1">
 
 
-        <p class="questions">Are you experiencing any of the following?</p>
-        <input type="checkbox" id="mc" name="question1" value="difficulty_breathing">Severe difficulty breathing<br>
-        <input type="checkbox" id="mc" name="question1" value="Severe_chestpain">Severe chest pain<br>
-        <input type="checkbox" id="mc" name="question1" value="waking_up">Having a very hard time waking up<br>
-        <input type="checkbox" id="mc" name="question1" value="confused">Feeling confused<br>
-        <input type="checkbox" id="mc" name="question1" value="consciousness">Lost consciousness<br>
-
-
-
-
-        <input id="button1" type="button" value="NEXT">
-
-
-    </form>
-
-    <form id="quiz2" name="quiz2">
-
-
-        <p class="questions">Are you experiencing any of the following:</p>
-        <input type="checkbox" id="mc" name="question2" value="breath">Shortness of breath at rest<br>
-        <input type="checkbox" id="mc" name="question2" value="lie_down">Inability to lie down because of difficulty
-        breathing<br>
-        <input type="checkbox" id="mc" name="question2" value="chronic">Chronic health conditions that you are having
-        difficulty managing<br>
-
-
-
-        <input id="button2" type="button" value="NEXT">
-
-
-
-    </form>
-
-    <form id="quiz3" name="quiz3">
-
-
-        <p class="questions">Do you have any of the following:</p>
-        <input type="checkbox" id="mc" name="question3" value="chills">Chills<br>
-        <input type="checkbox" id="mc" name="question3" value="painful_swallowing">Painful swallowing<br>
-        <input type="checkbox" id="mc" name="question3" value="stuffy_nose">Stuffy nose<br>
-        <input type="checkbox" id="mc" name="question3" value="headache">Headache<br>
-        <input type="checkbox" id="mc" name="question3" value="muscle_ache">Muscle or joint ache<br>
-        <input type="checkbox" id="mc" name="question3" value="unwell">Feeling unwell, fatigue or severe exhaustion<br>
-        <input type="checkbox" id="mc" name="question3" value="nausea">Nausea, vomiting, diarrhea or unexplained loss of
-        appetite<br>
-        <input type="checkbox" id="mc" name="question3" value="smell">Loss of sense of smell or taste<br>
-        <input type="checkbox" id="mc" name="question3" value="pink_eye">Pink Eye<br>
-
-        <input id="button3" type="button" value="FINISH">
+                <p class="questions">Are you experiencing any of the following?</p>
+                <input type="checkbox" class="mc" name="question1" value="difficulty_breathing">Severe difficulty
+                breathing<br>
+                <input type="checkbox" class="mc" name="question1" value="Severe_chestpain">Severe chest pain<br>
+                <input type="checkbox" class="mc" name="question1" value="waking_up">Having a very hard time waking
+                up<br>
+                <input type="checkbox" class="mc" name="question1" value="confused">Feeling confused<br>
+                <input type="checkbox" class="mc" name="question1" value="consciousness">Lost consciousness<br>
 
 
 
 
+                <input id="button1" type="button" value="NEXT">
 
-    </form>
 
-    <div id="after_submit">
-        
+            </form>
+
+            <form id="quiz2" name="quiz2">
+
+
+                <p class="questions">Are you experiencing any of the following:</p>
+                <input type="checkbox" class="mc" name="question2" value="breath">Shortness of breath at rest<br>
+                <input type="checkbox" class="mc" name="question2" value="lie_down">Inability to lie down because of
+                difficulty
+                breathing<br>
+                <input type="checkbox" class="mc" name="question2" value="chronic">Chronic health conditions that you
+                are
+                having
+                difficulty managing<br>
+
+
+
+                <input id="button2" type="button" value="NEXT">
+
+
+
+            </form>
+
+            <form id="quiz3" name="quiz3">
+
+
+                <p class="questions">Do you have any of the following:</p>
+                <input type="checkbox" class="mc" name="question3" value="chills">Chills<br>
+                <input type="checkbox" class="mc" name="question3" value="painful_swallowing">Painful swallowing<br>
+                <input type="checkbox" class="mc" name="question3" value="stuffy_nose">Stuffy nose<br>
+                <input type="checkbox" class="mc" name="question3" value="headache">Headache<br>
+                <input type="checkbox" class="mc" name="question3" value="muscle_ache">Muscle or joint ache<br>
+                <input type="checkbox" class="mc" name="question3" value="unwell">Feeling unwell, fatigue or severe
+                exhaustion<br>
+                <input type="checkbox" class="mc" name="question3" value="nausea">Nausea, vomiting, diarrhea or
+                unexplained
+                loss of
+                appetite<br>
+                <input type="checkbox" class="mc" name="question3" value="smell">Loss of sense of smell or taste<br>
+                <input type="checkbox" class="mc" name="question3" value="pink_eye">Pink Eye<br>
+
+                <input id="button3" type="button" value="FINISH">
+
+
+
+
+
+            </form>
+
+            <div id="after_submit">
+                <p id="message"></p>
+            </div>
+            <script src="../static/main.js"></script>
+        </div>
     </div>
-    <script src="../static/main.js"></script>
-
 
 
 </html>
