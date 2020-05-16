@@ -5,16 +5,17 @@
 	<style type="text/css">
 		#map
 		{
-			height: 400px;
-			width: 100%
+			height: 500px;
+			width: 1000px;
 		}
 	</style>
 
 	<script type="text/javascript">
-		let data = JSON.parse({{ data|tojson|safe }})
-
+		let data = JSON.parse( {{ data|tojson|safe }} )
 		let stock = data.stock
 		let needed = data.needed
+
+		let map_style = ({{ style|tojson|safe }})
 
 	</script>
 

@@ -1,4 +1,4 @@
-from flask import Flask, redirect, url_for, render_template, request, flash
+from flask import Flask, redirect, url_for, render_template, request, flash, json
 from dotenv import load_dotenv
 from pymongo import MongoClient
 import json
@@ -59,25 +59,15 @@ def map(supply):
 					"needed":location["needed"]
 					})
 
-		# print("############")
-		# print(stock)
-		# print("############")
-		# print(needed)
-		# print("############")
-
 		data = {
 			"stock": stock,
 			"needed": needed
 		}
-
-		print("#######")
-		
 		data = json.dumps(data)
-		print(data)
+		map_style = json.load(open("static/map_style.json"))
 
 
-
-		return render_template("map.html", type=supply, data=data, url=os.environ.get("MAP_API_URL")+"&callback=initMap&libraries=visualization")
+		return render_template("map.html", type=supply, data=data, style=map_style, url=os.environ.get("MAP_API_URL")+"&callback=initMap&libraries=visualization")
 	else:
 		return redirect(url_for("inventory"))
 
