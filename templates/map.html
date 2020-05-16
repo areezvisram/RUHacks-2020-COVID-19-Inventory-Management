@@ -2,7 +2,6 @@
 <html>
 <head>
 	<title>Map</title>
-	<script type="text/javascript" src="../static/map.js"></script>
 	<style type="text/css">
 		#map
 		{
@@ -10,6 +9,16 @@
 			width: 100%
 		}
 	</style>
+
+	<script type="text/javascript">
+		let data = JSON.parse({{ data|tojson|safe }})
+
+		let stock = data.stock
+		let needed = data.needed
+
+	</script>
+
+	<script type="text/javascript" src="../static/map.js"></script>
 </head>
 <body>
 	<div id="map"></div>

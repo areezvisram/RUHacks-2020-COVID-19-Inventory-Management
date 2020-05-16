@@ -1,6 +1,7 @@
 from flask import Flask, redirect, url_for, render_template, request, flash
 from dotenv import load_dotenv
 from pymongo import MongoClient
+import json
 import os
 
 app = Flask(__name__)
@@ -38,8 +39,45 @@ def redirect_map():
 @app.route("/map/<supply>")
 def map(supply):
 
-	if supp.find_one({"path":supply}):
-		return render_template("map.html", type=supply, url=os.environ.get("MAP_API_URL")+"&callback=initMap")
+	stock = []
+	needed = []
+
+	item_supply = supp.find_one({"path":supply})
+	if item_supply:
+
+		all_locations = list(locations.find({}))
+
+		for location in all_locations:
+			if "stock" in location:
+				stock.append({
+					"location":location["location"],
+					"stock":location["stock"]
+					})
+			if "needed" in location:
+				needed.append({
+					"location":location["location"],
+					"needed":location["needed"]
+					})
+
+		# print("############")
+		# print(stock)
+		# print("############")
+		# print(needed)
+		# print("############")
+
+		data = {
+			"stock": stock,
+			"needed": needed
+		}
+
+		print("#######")
+		
+		data = json.dumps(data)
+		print(data)
+
+
+
+		return render_template("map.html", type=supply, data=data, url=os.environ.get("MAP_API_URL")+"&callback=initMap&libraries=visualization")
 	else:
 		return redirect(url_for("inventory"))
 
