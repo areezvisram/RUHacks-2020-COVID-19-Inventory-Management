@@ -37,8 +37,14 @@ def redirect_map():
 
 @app.route("/map/<supply>")
 def map(supply):
+
+	if supp.find_one({"path":supply}):
+		return render_template("map.html", type=supply, url=os.environ.get("MAP_API_URL")+"&callback=initMap")
+	else:
+		return redirect(url_for("inventory"))
+
+
 	print(bool(supply))
-	return ("map for " + supply)
 
 if __name__ == "__main__":
 	print("SERVER START!")
