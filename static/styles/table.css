@@ -1,0 +1,178 @@
+body, html {
+	height: 100%;
+	font-family: 'Bebas Neue', cursive;
+}
+
+input {
+  display: block;
+	outline: none;
+	border: none;
+}
+
+.bg-img {
+  
+	background-image: url("../pictures/covid\ background\ 5.jpg");
+	min-height: 1000px;
+  
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+	position: relative;
+  
+  }
+
+.responsive {
+	width: 100%;
+	height: auto;
+  }
+
+textarea {
+  display: block;
+  outline: none;
+}
+
+
+.scroll {
+  position: relative;
+  overflow: hidden;
+}
+
+.table100 .ps__rail-y {
+  width: 9px;
+  background-color: transparent;
+  opacity: 1 !important;
+  right: 5px;
+}
+
+
+.container {
+  width: 1366px;
+  margin: 0 auto;
+}
+
+.container-table100 {
+
+  padding: 300px 60px;
+}
+
+.wrap-table100 {
+  width: 1170px;
+}
+
+
+.table100 {
+  background-color: #fff;
+}
+
+table {
+  width: 100%;
+  table-layout: fixed;
+  
+}
+
+th, td {
+  font-weight: unset;
+  padding-left: 20px;
+}
+
+
+
+.table100-head th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+
+.table100-body td {
+  padding-top: 16px;
+  padding-bottom: 16px;
+  text-align: center;
+}
+
+
+.table100 {
+  position: relative;
+  padding-top: 60px;
+}
+
+.table100-head {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+
+.table100-body {
+  max-height: 585px;
+  overflow: auto;
+}
+
+
+
+.table100.ver1 th {
+    font-family: 'Bebas Neue', cursive;
+    font-size: 30px;
+    color: #fff;
+    line-height: 1.4;
+
+  background-color:red;
+}
+
+.table100.ver1 td {
+    font-family: 'Bebas Neue', cursive;
+  font-size: 20px;
+  color: black;
+  line-height: 1.4;
+}
+
+.table100.ver1 .table100-body tr:nth-child(even) {
+  background-color:#ffe6e6;
+}
+
+
+.table100.ver1 .ps__rail-y {
+  right: 5px;
+}
+
+.table100.ver1 .ps__rail-y::before {
+  background-color: #ebebeb;
+}
+
+.table100.ver1 .ps__rail-y .ps__thumb-y::before {
+  background-color: #cccccc;
+}
+
+.maintitle {
+    font-size: 100px;
+    font-family: 'Bebas Neue', cursive;
+    margin: 0;
+    position: absolute;
+    text-align: center;
+    top: 18%;
+    transform: translateY(-50%);
+    width: 100%;
+    color: white;
+}
+
+
+.topnav {
+	margin-left: 1700px;
+	transform: translateY(70%);
+	background-color: black;
+	overflow: hidden;
+	
+  }
+  
+  
+  .topnav a {
+	
+	font-family: 'Bebas Neue', cursive;
+	font-size: 60px;
+	color: white;
+	text-align: center;
+	padding: 35px 16px;
+	text-decoration:none;
+  }
+  
+
+
