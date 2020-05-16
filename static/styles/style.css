@@ -5,8 +5,28 @@ body {
 
 
 
-#quiz {
+#quiz1 {
 	margin-left: 10px;
+	background: #d2def2;
+	padding: 10px 20px 10px 20px;
+	width: 400px;
+	border-radius: 20px;
+	float: left;
+
+}
+
+#quiz2 {
+	margin-left: -10px;
+	background: #d2def2;
+	padding: 10px 20px 10px 20px;
+	width: 400px;
+	border-radius: 20px;
+	float: left;
+
+}
+
+#quiz3 {
+	margin-left: -10px;
 	background: #d2def2;
 	padding: 10px 20px 10px 20px;
 	width: 400px;
@@ -58,6 +78,7 @@ input {
 	border-radius: 20px;
 	float: left;
 	margin-left: 20px;
+	margin-top: 50px;
 	font-size: 30px;
 
 
