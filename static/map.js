@@ -56,10 +56,30 @@ function set_pins(map)
 	{
 		let loc = {lat:point.location.lat, lng:point.location.long}
 
-		markers.push(new google.maps.Marker({
-			position: loc,
-			map:map
-		}))
+		let info_str = ""
+
+		for (let item of point.stock)
+		{
+			info_str += "<p>" + item.name + " : " + String(item.amount) + "</p>"
+		}
+
+		markers.push({
+			marker: new google.maps.Marker({
+				position: loc,
+				map:map,
+				title: point.location.address
+
+			}),
+			info: new google.maps.InfoWindow({
+				content: info_str
+			})
+		})
+
+	}
+
+	for (let point of markers)
+	{
+		point.marker.addListener("click", () => point.info.open(map, point.marker))
 	}
 }
 

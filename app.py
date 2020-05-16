@@ -49,15 +49,20 @@ def map(supply):
 
 		for location in all_locations:
 			if "stock" in location:
-				stock.append({
-					"location":location["location"],
-					"stock":location["stock"]
-					})
+				if bool(list(filter(lambda item: item["name"] == item_supply["name"] , location["stock"]))):
+					stock.append({
+						"location":location["location"],
+						"stock":location["stock"]
+						})
 			if "needed" in location:
-				needed.append({
-					"location":location["location"],
-					"needed":location["needed"]
-					})
+				if bool(list(filter(lambda item: item["name"] == item_supply["name"] , location["needed"]))):
+					needed.append({
+						"location":location["location"],
+						"needed":location["needed"]
+						})
+
+
+
 
 		data = {
 			"stock": stock,
@@ -67,7 +72,7 @@ def map(supply):
 		map_style = json.load(open("static/map_style.json"))
 
 
-		return render_template("map.html", type=supply, data=data, style=map_style, url=os.environ.get("MAP_API_URL")+"&callback=initMap&libraries=visualization")
+		return render_template("map.html", type=item_supply["name"], data=data, style=map_style, url=os.environ.get("MAP_API_URL")+"&callback=initMap&libraries=visualization")
 	else:
 		return redirect(url_for("inventory"))
 
