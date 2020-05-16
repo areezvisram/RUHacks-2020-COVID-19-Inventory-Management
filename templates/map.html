@@ -2,13 +2,7 @@
 <html>
 <head>
 	<title>Map</title>
-	<style type="text/css">
-		#map
-		{
-			height: 500px;
-			width: 1000px;
-		}
-	</style>
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/map.css') }}">
 
 	<script type="text/javascript">
 		let data = JSON.parse( {{ data|tojson|safe }} )
@@ -22,6 +16,8 @@
 	<script type="text/javascript" src="../static/map.js"></script>
 </head>
 <body>
+	<button id="change_heatmap">Heatmap</button>
+	<button id="change_markers">Markers</button>
 	<div id="map"></div>
 	<script async defer src={{ url }}></script>
 </body>

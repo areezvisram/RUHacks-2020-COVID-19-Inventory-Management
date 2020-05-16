@@ -43,9 +43,22 @@ function initMap()
 
 	}
 
-	
-	console.log(stock)
-	console.log(needed)
+
+	document.getElementById("change_heatmap").addEventListener("click", () => {
+	heat_map.setMap(map)
+	for (let marker of heat_markers)
+	{
+		marker["marker"].setMap(null)
+	}
+})
+
+document.getElementById("change_markers").addEventListener("click", () => {
+	heat_map.setMap(null)
+	for (let marker of heat_markers)
+	{
+		marker["marker"].setMap(map)
+	}
+})
 
 }
 
@@ -116,9 +129,10 @@ function set_heat_points(map)
 
 		for (let point of heat_markers)
 		{
+			point.marker.setMap(null)
 			point.marker.addListener("click", () => point.info.open(map, point.marker))
 		}
-		
+
 		//end of heat point markers
 	}
 
