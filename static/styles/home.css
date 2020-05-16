@@ -1,0 +1,66 @@
+.body {
+    height: 100%;
+}
+
+
+.bg-img {
+  
+
+  min-height: 1000px;
+
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  position: relative;
+
+  filter: blur(8px);
+  -webkit-filter: blur(8px);
+
+}
+
+
+.responsive {
+  width: 100%;
+  height: auto;
+}
+
+.topnav {
+  background-color: white;
+  overflow: hidden;
+}
+
+.topnav a {
+    float:right;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 30px;
+    color: black;
+    text-align: center;
+    padding: 35px 16px;
+    text-decoration:none;
+}
+
+.container{
+    position: relative;
+    text-align: center;
+    color: black;
+}
+
+.maintitle {
+    font-size: 200px;
+    font-family: 'Bebas Neue', cursive;
+    margin: 0;
+    position: absolute;
+    text-align: center;
+    top: 30%;
+    transform: translateY(-50%);
+    width: 100%;
+}
+
+.mainheading {
+    font-size: 80px;
+    top:60%;
+    font-family: 'Bebas Neue', cursive;
+    margin: 0;
+    position: absolute;
+}
