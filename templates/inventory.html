@@ -44,7 +44,7 @@
 									{% for item in inventory %}
 									<tr class="row100 head">
 										<td>{{ item["name"] }}</td>
-										<td>pic</td>
+										<td><img src="{{ url_for('static', 'pictures/' + item[file_name]) }}"></td>
 										<td>{{ item["stock"] }}</td>
 										<td>{{ item["needed"] }}</td>
 										<td><a href="/map/{{ item["path"] }}">Map</a></td>
