@@ -112,7 +112,10 @@ function set_heat_points(map)
 	{
 		let loc = {lat:point.location.lat, lng:point.location.long}
 
-		heat_points.push(new google.maps.LatLng(loc.lat,loc.lng))
+		heat_points.push({
+			location: new google.maps.LatLng(loc.lat,loc.lng),
+			weight: point.weight
+		})
 
 		//start of heat point markers
 		let info_str = "<p>" + point.location.address + "</p>"

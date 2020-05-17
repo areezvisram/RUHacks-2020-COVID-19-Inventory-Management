@@ -57,7 +57,7 @@ def map(supply):
 						"needed":location["needed"]
 						})
 
-			data = {
+		data = {
 			"stock": stock,
 			"needed": needed
 		}
