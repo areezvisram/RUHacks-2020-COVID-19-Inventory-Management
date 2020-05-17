@@ -1,26 +1,63 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-	<title>Map</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	
 	<link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/map.css') }}">
+	<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
 
 	<script type="text/javascript">
-		let data = JSON.parse( {{ data|tojson|safe }} )
+		let data = JSON.parse({{ data| tojson | safe }} )
 		let stock = data.stock
 		let needed = data.needed
 
-		let map_style = ({{ style|tojson|safe }})
+		let map_style = ({{ style| tojson | safe }})
 
 	</script>
 
 	<script type="text/javascript" src="../static/map.js"></script>
 </head>
+
 <body>
-	<button id="change_heatmap">Heatmap</button>
-	<button id="change_markers">Markers</button>
-	<br>
-	<button id="toggle_stock_markers">Toggle "In Stock" Markers</button>
-	<div id="map"></div>
-	<script async defer src={{ url }}></script>
+	<div class="container">
+		<div class="maintitle">MEDICAL SUPPLY HEATMAP</div>
+		<div class="maintools">TOOLS</div>
+		<table class="itemtable">
+			<tr>
+			   <td class="itemname">
+					{{ type }}
+			   </td>
+			</tr>
+		  </table>
+		  <table class="instock_table">
+			<tr>
+			   <td class="instock">
+					IN STOCK: {{ inventory['stock'] }}
+			   </td>
+			</tr>
+		  </table>
+
+		  <table class="needed_table">
+			<tr>
+			   <td class="needed">
+					NEEDED: {{ inventory['needed'] }}
+			   </td>
+			</tr>
+		  </table>
+		
+		
+		<button id="change_heatmap">Heatmap</button>
+		<button id="change_markers">Markers</button>
+		
+		
+		<button id="instock">Toggle "In Stock" Markers</button>
+		<a href="{{ url_for('inventory')}}" class="button">BACK TO INVENTORY</a>>
+		<div id="map"></div>
+		<script async defer src={{ url }}></script>
+
+	</div>
 </body>
+
 </html>

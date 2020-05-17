@@ -58,6 +58,9 @@ textarea {
 
 .wrap-table100 {
   width: 1170px;
+  position: absolute;
+  bottom: 60px;
+  right: 350px;
 }
 
 

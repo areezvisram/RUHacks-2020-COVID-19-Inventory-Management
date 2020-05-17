@@ -1,15 +1,155 @@
 #map
 {
-	height: 500px;
-	width: 1000px;
+	left: 10px;
+	bottom: 0px;
+	height: 820px;
+	width: 1475px;
+	position: absolute;
 }
 
-#change_heatmap
-{
+.maintitle {
+    font-size: 100px;
+    font-family: 'Bebas Neue', cursive;
+    margin: 0;
+    position: absolute;
+    left: 15%;
+    top: 9%;
+    transform: translateY(-50%);
+    
+	color: white;
+	text-decoration: underline;
+}
+
+.maintools {
+	font-size: 100px;
+    font-family: 'Bebas Neue', cursive;
+    margin: 0;
+    position: absolute;
+    left: 84%;
+    top: 9%;
+    transform: translateY(-50%);    
+	color: white;
+	text-decoration: underline;
+}
+
+
+.container {
+	background-color: black;
+	width: 100%;
+	height: 960px;
+  }
+
+#change_heatmap {
+	background: red;
+	font-family: 'Bebas Neue', cursive;
+	border: none;
+	border-radius: 5px;
+	padding: 10px;
+	color: white;
+	font-size: 30px;
+	transition-duration: .5s;
+	top: 700px;
+	margin-left: 1565px;
+	position: relative;	
 
 }
 
-#change_markers
-{
+#change_markers {
+	background: red;
+	font-family: 'Bebas Neue', cursive;
+	border: none;
+	border-radius: 5px;
+	padding: 10px;
+	color: white;
+	font-size: 30px;
+	transition-duration: .5s;
+	margin-top: 640px;
+	margin-left: 1690px;
+
 	
+}
+
+#instock {
+	background: red;
+	font-family: 'Bebas Neue', cursive;
+	border: none;
+	border-radius: 5px;
+	padding: 10px;
+	color: white;
+	font-size: 30px;
+	transition-duration: .5s;
+	margin-top: 20px;
+	margin-left: 1538px;
+
+	
+}
+
+a.button {
+	-webkit-appearance: button;
+    -moz-appearance: button;
+	appearance: button;
+	text-decoration: none;
+	background: green;
+	font-family: 'Bebas Neue', cursive;
+	border: none;
+	border-radius: 5px;
+	padding: 10px;
+	color: white;
+	font-size: 40px;
+	transition-duration: .5s;
+	margin-top: 30px;
+	margin-left: 1550px;
+
+	
+}
+
+.itemname {
+	font-size: 80px;
+    font-family: 'Bebas Neue', cursive;
+    margin: 0;    
+	color: white;
+	text-decoration: underline;
+	text-align: center;
+}
+
+.itemtable {
+	position: absolute;
+	
+	width: 300px;
+	top: 160px;
+	right: 60px;
+}
+
+.instock {
+	font-size: 50px;
+    font-family: 'Bebas Neue', cursive;
+    margin: 0;    
+	color: white;
+	text-decoration: underline;
+	text-align: center;
+}
+
+.instock_table {
+	position: absolute;
+	
+	width: 300px;
+	top: 275px;
+	right: 60px;
+}
+
+.needed {
+	font-size: 50px;
+    font-family: 'Bebas Neue', cursive;
+    margin: 0;    
+	color: white;
+	text-decoration: underline;
+	text-align: center;
+}
+
+.needed_table {
+	position: absolute;
+	
+	width: 300px;
+	top: 350px;
+	right: 60px;
 }
