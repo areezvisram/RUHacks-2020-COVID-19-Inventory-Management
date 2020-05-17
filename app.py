@@ -41,7 +41,6 @@ def map(supply):
 
 	stock = []
 	needed = []
-	supplies = list(supp.find({}))
 
 	if (supply == "all"):
 		all_locations = list(locations.find({}))
@@ -67,7 +66,7 @@ def map(supply):
 		map_style = json.load(open("static/map_style.json"))
 
 
-		return render_template("map.html", type="all", data=data, inventory=supplies, style=map_style, url=os.environ.get("MAP_API_URL")+"&callback=initMap&libraries=visualization")
+		return render_template("map.html", type="all", data=data, style=map_style, url=os.environ.get("MAP_API_URL")+"&callback=initMap&libraries=visualization")
 
 
 	item_supply = supp.find_one({"path":supply})
@@ -97,7 +96,7 @@ def map(supply):
 		map_style = json.load(open("static/map_style.json"))
 
 
-		return render_template("map.html", type=item_supply["name"], data=data, style=map_style, url=os.environ.get("MAP_API_URL")+"&callback=initMap&libraries=visualization")
+		return render_template("map.html", type=item_supply["name"], inventory=item_supply, data=data, style=map_style, url=os.environ.get("MAP_API_URL")+"&callback=initMap&libraries=visualization")
 	else:
 		return redirect(url_for("inventory"))
 
