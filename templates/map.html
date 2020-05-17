@@ -23,29 +23,31 @@
 <body>
 	<div class="container">
 		<div class="maintitle">MEDICAL SUPPLY HEATMAP</div>
+		{% if type != "all" %}
 		<div class="maintools">TOOLS</div>
 		<table class="itemtable">
 			<tr>
-			   <td class="itemname">
+				<td class="itemname">
 					{{ type }}
-			   </td>
+				</td>
 			</tr>
-		  </table>
-		  <table class="instock_table">
+		</table>
+		<table class="instock_table">
 			<tr>
-			   <td class="instock">
+			   	<td class="instock">
 					IN STOCK: {{ inventory['stock'] }}
-			   </td>
+			  	 </td>
 			</tr>
-		  </table>
+		</table>
 
-		  <table class="needed_table">
+		<table class="needed_table">
 			<tr>
-			   <td class="needed">
+			   	<td class="needed">
 					NEEDED: {{ inventory['needed'] }}
-			   </td>
+			   	</td>
 			</tr>
-		  </table>
+		</table>
+		{% endif %}
 		
 		
 		<button id="change_heatmap">Heatmap</button>

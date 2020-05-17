@@ -45,27 +45,27 @@ function initMap()
 
 
 	document.getElementById("change_heatmap").addEventListener("click", () => {
-	heat_map.setMap(map)
-	for (let marker of heat_markers)
-	{
-		marker["marker"].setMap(null)
-	}
-})
+		heat_map.setMap(map)
+		for (let marker of heat_markers)
+		{
+			marker["marker"].setMap(null)
+		}
+	})
 
-document.getElementById("change_markers").addEventListener("click", () => {
-	heat_map.setMap(null)
-	for (let marker of heat_markers)
-	{
-		marker["marker"].setMap(map)
-	}
-})
+	document.getElementById("change_markers").addEventListener("click", () => {
+		heat_map.setMap(null)
+		for (let marker of heat_markers)
+		{
+			marker["marker"].setMap(map)
+		}
+	})
 
-document.getElementById("toggle_stock_markers").addEventListener("click", () => {
-	for (let marker of markers)
-	{
-		marker["marker"].setMap( Boolean(marker["marker"].getMap()) ? null : map)
-	}
-})
+	document.getElementById("instock").addEventListener("click", () => {
+		for (let marker of markers)
+		{
+			marker["marker"].setMap( Boolean(marker["marker"].getMap()) ? null : map)
+		}
+	})
 
 }
 

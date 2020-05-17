@@ -60,20 +60,21 @@ def populate_map():
 
 	data = None
 
-	with open('static/csvjson.json') as f:
-	# with open('static/ca.json') as f:
+	# with open('static/csvjson.json') as f:
+	with open('static/ca.json') as f:
   		data = json.load(f)
 
 		
 	for place in data:
 		print(place["city"])
-		# num_points = random.randint(1, 4)
+		# num_points = random.randint(1, 3)
 		num_points = 1
 
 		for i in range(num_points):
-			if random.randint(0,20) == 0:
+			# if random.randint(0,25) == 0:
+			if True:
 				item = random.choice(supplies_list)
-				amount = random.randint(50, 1000)
+				amount = random.randint(1500, 10000)
 				# weight = random.randint(1, 10)
 				weight = 1
 				lat_noise = random.random() * (-1 if random.randint(0,1) else 1) * 2.5
@@ -86,7 +87,7 @@ def populate_map():
 						"address": ""
 					},
 					"weight": weight,
-					"needed": [
+					"stock": [
 						{
 							"name": item,
 							"amount": amount
