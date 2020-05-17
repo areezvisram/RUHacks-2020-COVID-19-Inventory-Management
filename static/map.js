@@ -9,7 +9,7 @@ function initMap()
 
 	let loc = {"lat": 42.83, "lng": -79.12}
 	let map_data = {
-		zoom:15,
+		zoom:4,
 		center: loc,
 		styles: map_style,
 		disableDefaultUI: true
