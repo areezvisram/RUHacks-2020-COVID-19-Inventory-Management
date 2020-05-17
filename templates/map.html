@@ -23,8 +23,8 @@
 <body>
 	<div class="container">
 		<div class="maintitle">MEDICAL SUPPLY HEATMAP</div>
-		{% if type != "all" %}
 		<div class="maintools">TOOLS</div>
+		{% if type != "all" %}
 		<table class="itemtable">
 			<tr>
 				<td class="itemname">
@@ -45,6 +45,14 @@
 			   	<td class="needed">
 					NEEDED: {{ inventory['needed'] }}
 			   	</td>
+			</tr>
+		</table>
+		{% else %}
+		<table class="itemtable">
+			<tr>
+				<td class="itemname">
+					ALL
+				</td>
 			</tr>
 		</table>
 		{% endif %}
