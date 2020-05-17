@@ -156,9 +156,11 @@ a.button {
 
 .image {
 	background-color: white;
+	padding: 10px;
 	width: 200px;
 	height: 200px;
 	position: absolute;
 	top: 450px;
 	right: 115px;
+	border-radius: 10px;
 }
