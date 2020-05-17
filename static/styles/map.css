@@ -104,7 +104,7 @@ a.button {
 }
 
 .itemname {
-	font-size: 80px;
+	font-size: 60px;
     font-family: 'Bebas Neue', cursive;
     margin: 0;    
 	color: white;
@@ -152,4 +152,13 @@ a.button {
 	width: 300px;
 	top: 350px;
 	right: 60px;
+}
+
+.image {
+	background-color: white;
+	width: 200px;
+	height: 200px;
+	position: absolute;
+	top: 450px;
+	right: 115px;
 }
